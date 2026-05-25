@@ -1,0 +1,45 @@
+name: Build
+
+on:
+  workflow_run:
+    workflows: ['CI']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build & Package
+    runs-on: ubuntu-latest
+    # workflow_run fires regardless of CI outcome; gate on success here.
+    # workflow_dispatch has no triggering run, so allow it through too.
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Package dist as zip
+        run: |
+          cd dist
+          zip -r "../mnemis-connect-web-${{ github.sha }}.zip" .
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mnemis-connect-web-${{ github.sha }}
+          path: mnemis-connect-web-${{ github.sha }}.zip
+          if-no-files-found: error

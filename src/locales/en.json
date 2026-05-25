@@ -1,0 +1,49 @@
+{
+  "landing": {
+    "heading": "Welcome to the Mnemis Agent Service",
+    "brand": "Mnemis CUA Bot",
+    "pageTitle": "Connect your bot",
+    "fieldLabel": "Enter the Bot ID to get started",
+    "placeholder": "xxxxxxxx",
+    "submit": "Enter",
+    "hint": "Or visit via your dedicated link",
+    "errorEmpty": "Please enter a Bot ID",
+    "errorTooLong": "Must be 12 characters or fewer"
+  },
+  "call": {
+    "statusOnline": "Online",
+    "pageTitle": "Connect to {{botId}}",
+    "statusBusy": "The bot is currently in another call.",
+    "statusOffline": "The bot is not online right now.",
+    "statusError": "Something went wrong.",
+    "loading": "Loading…",
+    "callBtn": "Start call",
+    "micDenied": "Microphone access denied. Please allow microphone permission in browser settings and try again.",
+    "retry": "Retry",
+    "back": "Back to home",
+    "modal": {
+      "title": "Hi, what should I call you?",
+      "placeholder": "Your nickname"
+    },
+    "waiting": {
+      "title": "Connecting to the bot…",
+      "remaining": "{{seconds}}s left"
+    },
+    "calling": {
+      "hangup": "Hang up",
+      "muteAudio": "Mute mic",
+      "unmuteAudio": "Unmute mic",
+      "startShare": "Share screen",
+      "stopShare": "Stop sharing",
+      "sharing": "You are sharing",
+      "botSharing": "{{name}} is sharing",
+      "privacyNotice": "The bot can see your screen. Please mind your privacy."
+    },
+    "toast": {
+      "busy": "The bot is busy. Please try again later.",
+      "offline": "The bot is offline.",
+      "notFound": "Bot does not exist or has been removed.",
+      "networkError": "Network error. Please retry."
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "landing": {
+    "heading": "欢迎使用 Mnemis Agent 对话服务",
+    "brand": "Mnemis CUA Bot",
+    "pageTitle": "连接你的 Bot",
+    "fieldLabel": "输入 Bot ID 以开始",
+    "placeholder": "xxxxxxxx",
+    "submit": "进入",
+    "hint": "或通过你的专属链接进行访问",
+    "errorEmpty": "请输入 Bot ID",
+    "errorTooLong": "长度不能超过 12 个字符"
+  },
+  "call": {
+    "statusOnline": "在线",
+    "pageTitle": "连接到 {{botId}}",
+    "statusBusy": "机器人正在通话中",
+    "statusOffline": "机器人当前不在线",
+    "statusError": "出错了",
+    "loading": "加载中…",
+    "callBtn": "发起呼叫",
+    "micDenied": "麦克风权限被拒绝，请在浏览器设置中允许使用麦克风后重试",
+    "retry": "重试",
+    "back": "返回首页",
+    "modal": {
+      "title": "Hi，我要怎么称呼你？",
+      "placeholder": "你的昵称"
+    },
+    "waiting": {
+      "title": "正在为您接通…",
+      "remaining": "剩余 {{seconds}} 秒"
+    },
+    "calling": {
+      "hangup": "挂断",
+      "muteAudio": "关闭麦克风",
+      "unmuteAudio": "打开麦克风",
+      "startShare": "共享屏幕",
+      "stopShare": "停止共享",
+      "sharing": "您正在分享",
+      "botSharing": "{{name}} 正在分享",
+      "privacyNotice": "机器人可以看到你的屏幕，请注意隐私"
+    },
+    "toast": {
+      "busy": "机器人正在忙，请稍后再试",
+      "offline": "机器人不在线",
+      "notFound": "机器人不存在或已下线",
+      "networkError": "网络错误，请重试"
+    }
+  }
+}
